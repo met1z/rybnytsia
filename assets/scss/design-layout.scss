@@ -1,0 +1,31 @@
+:root {
+  //colors
+  --ryb-error: #dc4f4b;
+  --ryb-white: #fff;
+  --ryb-blue: #879aff;
+  --ryb-light-blue: #e4e8ff;
+  --ryb-black: #000000;
+
+  //constants
+  --hc-container-gap: 0;
+  --hc-container-width: 1640px;
+}
+
+@media (max-width: 1920px) {
+  :root {
+    --hc-container-gap: 140px;
+    --hc-container-width: 100%;
+  }
+}
+
+@media (max-width: 1440px) {
+  :root {
+    --hc-container-gap: 70px;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --hc-container-gap: 1rem;
+  }
+}

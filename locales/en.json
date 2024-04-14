@@ -1,0 +1,8 @@
+{
+  "header": {
+    "index": "Header",
+    "english": "English",
+    "ukraine": "Ukraine"
+  },
+  "footer": "Footer"
+}
