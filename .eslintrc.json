@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "extends": ["plugin:prettier/recommended", "@nuxtjs/eslint-config-typescript", "prettier"],
+  "plugins": ["simple-import-sort"],
+  "rules": {
+    "no-useless-constructor": "off",
+    "import/order": "off",
+    "simple-import-sort/imports": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "ignoreRestSiblings": true,
+        "argsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_",
+        "destructuredArrayIgnorePattern": "^_"
+      }
+    ],
+    "no-console": "off",
+    "vue/no-v-html": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  }
+}
