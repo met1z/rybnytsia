@@ -1,15 +1,19 @@
 <script lang="ts" setup>
+import RybButton from '../generic/RybButton.vue'
+
 const { setLocale } = useLocale()
 </script>
 
 <template>
-  <div style="display: flex">
+  <header class="header-container">
     <h1>{{ $t('header.index') }}</h1>
-    <button type="button" @click="() => setLocale('en')">
-      <h1>{{ $t('header.english') }}</h1>
-    </button>
-    <button type="button" @click="() => setLocale('ua')">
-      <h1>{{ $t('header.ukraine') }}</h1>
-    </button>
-  </div>
+    <RybButton name="English" type="button" :text="$t('header.english')" @click="() => setLocale('en')" />
+    <RybButton name="Ukraine" type="button" :text="$t('header.ukraine')" @click="() => setLocale('ua')" />
+  </header>
 </template>
+
+<style scoped lang="scss">
+.header-container {
+  display: flex;
+}
+</style>

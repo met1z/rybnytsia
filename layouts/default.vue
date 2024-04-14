@@ -6,17 +6,21 @@ import RybHeader from '~/components/navigation/RybHeader.vue'
 
 <template>
   <div class="global">
-    <RybHeader />
-    <main class="main-default main-default-padding">
-      <RybContainer>
+    <RybContainer class="ryb-container">
+      <RybHeader />
+      <main class="main-default main-default-padding">
         <NuxtPage />
-      </RybContainer>
-    </main>
-    <RybFooter />
+      </main>
+      <RybFooter />
+    </RybContainer>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.ryb-container {
+  margin: auto;
+}
+
 .main-default {
   display: flex;
   flex-direction: column;
