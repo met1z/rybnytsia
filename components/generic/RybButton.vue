@@ -65,16 +65,21 @@ withDefaults(
 
   transition: all 0.3s ease;
   border-radius: 2rem;
-  background-color: var(--ryb-sky-blue);
 
   &:hover {
-    color: var(--ryb-white);
     background-color: var(--ryb-midnight-blue);
+
+    .hc-button-text {
+      color: var(--ryb-sky-blue);
+    }
   }
 
   &:enabled:active {
-    color: var(--ryb-white);
     background-color: var(--ryb-midnight-blue);
+
+    .hc-button-text {
+      color: var(--ryb-sky-blue);
+    }
   }
 
   .hc-button-icon {
@@ -88,7 +93,9 @@ withDefaults(
     transition: inherit;
     white-space: nowrap;
 
-    font-size: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--ryb-midnight-blue);
   }
 
   .hc-spinner-external {

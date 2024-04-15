@@ -12,7 +12,6 @@ const { currentLocale, setLocale } = useLocale()
       <RybImage image="/logo.png" alt="Logo" :custom-aspect-ratio="(625 / 893) * 100 + '%'" />
     </div>
     <div class="header-actions">
-      <RybLocaleSwitcher :locale="currentLocale" @on-change-locale="(c) => setLocale(c)" />
       <div class="header-actions-buttons">
         <NuxtLink :to="{ path: '/' }" :aria-label="$t('header.routes.main')">
           <RybButton name="Main" type="button" :text="$t('header.routes.main')" />
@@ -24,6 +23,7 @@ const { currentLocale, setLocale } = useLocale()
           <RybButton name="About us" type="button" :text="$t('header.routes.aboutUs')" />
         </NuxtLink>
       </div>
+      <RybLocaleSwitcher :locale="currentLocale" @on-change-locale="(c) => setLocale(c)" />
     </div>
   </header>
 </template>
@@ -43,20 +43,13 @@ const { currentLocale, setLocale } = useLocale()
   .header-actions {
     display: flex;
     align-items: center;
-    gap: 2.625rem;
-
-    @media (max-width: 1024px) {
-      gap: 2rem;
-    }
+    gap: 2rem;
 
     .header-actions-buttons {
       display: flex;
       align-items: center;
-      gap: 5.25rem;
 
-      @media (max-width: 1024px) {
-        gap: 2.5rem;
-      }
+      gap: 2.5rem;
     }
   }
 }
