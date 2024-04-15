@@ -3,6 +3,10 @@ import { RYB_LOCALE, TWO_WEEK_IN_SEC } from '~/common/constants'
 export const useLocale = () => {
   const i18n = useI18n()
 
+  const currentLocale = computed(
+    () => (useCookie(RYB_LOCALE).value ? useCookie(RYB_LOCALE).value : 'en') as 'en' | 'ua',
+  )
+
   const trySetLocaleFromCookie = () => {
     const locale = useCookie(RYB_LOCALE).value
     if (locale) i18n.locale.value = locale
@@ -17,5 +21,5 @@ export const useLocale = () => {
     useCookie(RYB_LOCALE).value = value
   }
 
-  return { trySetLocaleFromCookie, setLocale }
+  return { currentLocale, trySetLocaleFromCookie, setLocale }
 }

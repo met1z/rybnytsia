@@ -1,8 +1,16 @@
 {
   "header": {
-    "index": "Header",
     "english": "English",
-    "ukraine": "Ukraine"
+    "ukraine": "Ukraine",
+    "routes": {
+      "main": "Main page",
+      "products": "Products",
+      "aboutUs": "About us"
+    },
+    "locale": {
+      "en": "EN",
+      "ua": "UA"
+    }
   },
   "footer": "Footer"
 }

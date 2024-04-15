@@ -61,18 +61,20 @@ withDefaults(
   justify-content: center;
   align-items: center;
 
-  padding: 0 1rem;
+  padding: 0.5rem 1.5rem;
 
-  transition: 0.2s ease;
+  transition: all 0.3s ease;
   border-radius: 2rem;
-  background-color: var(--ryb-blue);
+  background-color: var(--ryb-sky-blue);
 
   &:hover {
-    background-color: var(--ryb-light-blue);
+    color: var(--ryb-white);
+    background-color: var(--ryb-midnight-blue);
   }
 
-  &:active {
-    background-color: var(--ryb-light-blue);
+  &:enabled:active {
+    color: var(--ryb-white);
+    background-color: var(--ryb-midnight-blue);
   }
 
   .hc-button-icon {

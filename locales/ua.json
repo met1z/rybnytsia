@@ -1,8 +1,16 @@
 {
   "header": {
-    "index": "Хеадер",
     "english": "Английский",
-    "ukraine": "Український"
+    "ukraine": "Український",
+    "routes": {
+      "main": "Головна",
+      "products": "Товари",
+      "aboutUs": "Про нас"
+    },
+    "locale": {
+      "en": "АНГ",
+      "ua": "УКР"
+    }
   },
   "footer": "Футер"
 }
