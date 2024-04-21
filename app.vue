@@ -1,10 +1,5 @@
 <script lang="ts" setup>
 const { head } = useDefaultHead()
-const localeService = useLocale()
-
-useAsyncData(async () => {
-  await localeService.trySetLocaleFromCookie()
-})
 
 useHead(head)
 </script>
