@@ -1,13 +1,10 @@
 import { createVuetify } from 'vuetify'
-import { VApp, VDialog, VExpandTransition, VMenu, VOverlay, VVirtualScroll } from 'vuetify/components'
+import { VApp, VCard, VMenu } from 'vuetify/components'
 
 const VUETIFY_COMPONENTS = {
   [VApp.name!]: VApp,
-  [VExpandTransition.name!]: VExpandTransition,
-  [VOverlay.name!]: VOverlay,
   [VMenu.name!]: VMenu,
-  [VVirtualScroll.name!]: VVirtualScroll,
-  [VDialog.name!]: VDialog,
+  [VCard.name!]: VCard,
 }
 
 export default defineNuxtPlugin((nuxt) => {

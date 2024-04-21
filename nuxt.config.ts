@@ -23,13 +23,7 @@ export default defineNuxtConfig({
     transpile: ['vuetify'],
   },
 
-  css: [
-    'vuetify/styles',
-    'swiper/css',
-    'swiper/css/free-mode',
-    '@/assets/scss/global-layout.scss',
-    '@/assets/scss/design-layout.scss',
-  ],
+  css: ['vuetify/styles', 'swiper/css', '@/assets/scss/global-layout.scss', '@/assets/scss/design-layout.scss'],
 
   ssr: true,
 

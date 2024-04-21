@@ -14,5 +14,14 @@ withDefaults(defineProps<{ text: string | number; tag?: 'h4' | 'div' | 'p' | 'la
 .ryb-text {
   font-size: 3rem;
   line-height: 133%;
+  color: var(--ryb-midnight-blue);
+
+  @media (max-width: 1250px) {
+    font-size: 2.25rem;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 1.75rem;
+  }
 }
 </style>

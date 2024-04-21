@@ -12,16 +12,16 @@ withDefaults(defineProps<{ text: string | number; tag?: 'h4' | 'div' | 'p' | 'la
 
 <style lang="scss" scoped>
 .ryb-text {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 133%;
   color: var(--ryb-midnight-blue);
 
   @media (max-width: 1250px) {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   @media (max-width: 420px) {
-    font-size: 1.15rem;
+    font-size: 0.8125rem;
   }
 }
 </style>

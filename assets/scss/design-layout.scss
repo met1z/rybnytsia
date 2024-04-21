@@ -9,25 +9,26 @@
   --ryb-light: #ebebeb;
 
   //constants
-  --hc-container-gap: 0;
-  --hc-container-width: 1640px;
+  --ryb-container-gap: 0;
+  --ryb-container-width: 1640px;
+  --ryb-header-height: 72px;
 }
 
 @media (max-width: 1920px) {
   :root {
-    --hc-container-gap: 140px;
-    --hc-container-width: 100%;
+    --ryb-container-gap: 140px;
+    --ryb-container-width: 100%;
   }
 }
 
 @media (max-width: 1440px) {
   :root {
-    --hc-container-gap: 70px;
+    --ryb-container-gap: 70px;
   }
 }
 
 @media (max-width: 1024px) {
   :root {
-    --hc-container-gap: 1rem;
+    --ryb-container-gap: 1rem;
   }
 }
