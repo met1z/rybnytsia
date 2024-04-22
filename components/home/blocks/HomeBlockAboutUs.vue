@@ -23,7 +23,7 @@ import HomeDefaultContainer from '../HomeDefaultContainer.vue'
           <RybImage image="/about-us/image2.png" alt="About us 2" :custom-aspect-ratio="(590 / 990) * 100 + '%'" />
         </div>
         <div class="home-about-us-text">
-          <RybDefaultText :text="$t('aboutUs.block1')" />
+          <RybDefaultText :text="$t('aboutUs.block2')" />
         </div>
       </div>
       <RybDefaultText :text="$t('aboutUs.block3')" />

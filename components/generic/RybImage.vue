@@ -77,7 +77,7 @@ const dominantColor = computed(() => {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  transition: 0.25s ease;
+  transition: 0.5s ease;
   transition-property: background-color, opacity, transform;
 
   img {
