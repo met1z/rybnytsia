@@ -39,5 +39,14 @@
     "index": "Partners",
     "text": "“Rybnytsya” offers excellent conditions on the market of fish and marine products. We invite trade networks, dealers, and distributors to cooperate. We guarantee products quality, compliance with storage, processing, production and delivery on time . Our products are presented in big retail chains such as:"
   },
-  "footer": "Footer"
+  "footer":{
+    "title":"Rybnytsya",
+    "text":{
+      "privacyPolicy": "Privacy Policy",
+      "termsConditions": "Terms & Conditions",
+      "aboutUs": "About Us",
+      "telephone1": "Telephone1",
+      "telephone2": "Telephone2"
+    }
+  }
 }
