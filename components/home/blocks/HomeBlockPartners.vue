@@ -15,7 +15,7 @@ import HomeDefaultContainer from '../HomeDefaultContainer.vue'
           <RybDefaultText :text="$t('partners.text')" tag="div" />
         </div>
         <div class="home-partners-image">
-          <RybImage image="/partners/image.jpeg" alt="About us 1" :custom-aspect-ratio="(620 / 1004) * 100 + '%'" />
+          <RybImage image="/partners/image.webp" alt="About us 1" :custom-aspect-ratio="(620 / 1004) * 100 + '%'" />
         </div>
       </div>
     </div>

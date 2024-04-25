@@ -13,8 +13,8 @@ export const useDefaultHead = () => {
       { hid: 'og:site_name', name: 'og:site_name', content: defaultTitle },
       { hid: 'description', name: 'description', content: config.public.description },
       { hid: 'og:description', name: 'og:description', content: config.public.description },
-      { hid: 'twitter:image', name: 'twitter:image', content: '/main-seo.jpeg' },
-      { hid: 'og:image', property: 'og:image', content: '/main-seo.jpeg' },
+      { hid: 'twitter:image', name: 'twitter:image', content: '/main-seo.webp' },
+      { hid: 'og:image', property: 'og:image', content: '/main-seo.webp' },
       {
         hid: 'keywords',
         name: 'keywords',

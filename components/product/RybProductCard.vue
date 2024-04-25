@@ -5,11 +5,12 @@ import RybDefaultText from '../generic/typography/RybDefaultText.vue'
 defineProps<{
   name: string
   image: string
+  overflow?: boolean
 }>()
 </script>
 
 <template>
-  <div class="ryb-product-card">
+  <div class="ryb-product-card" :class="{ 'overflow-text': overflow }">
     <RybImage :alt="name" :image="image" custom-aspect-ratio="100%" />
     <RybDefaultText :text="name" />
   </div>
@@ -30,6 +31,17 @@ defineProps<{
   @media (max-width: 450px) {
     gap: 1rem;
     padding: 1rem;
+  }
+}
+
+.overflow-text {
+  overflow: hidden;
+
+  .ryb-text {
+    flex: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 }
 </style>

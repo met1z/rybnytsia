@@ -2,6 +2,7 @@
 import type { Swiper as SwiperClass } from 'swiper/types'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 
+import { HOME_PRODUCTS } from '~/common/constants'
 import SliderIcon from '~/components/icons/SliderIcon.vue'
 
 import RybSkeleton from '../../generic/RybSkeleton.vue'
@@ -40,8 +41,13 @@ const setSwiper = (swiper: SwiperClass) => {
           }"
           @swiper="setSwiper"
         >
-          <SwiperSlide v-for="item in 10" :key="item">
-            <RybProductCard :name="$t('products.goldSmokedSalmon')" image="/products/gold-smoked-salmon.png" />
+          <SwiperSlide v-for="item in HOME_PRODUCTS" :key="item.i18nCode">
+            <RybProductCard
+              :name="$t(`products.${item.i18nCode}`)"
+              :image="item.image"
+              overflow
+              class="ryb-swiper-slide"
+            />
           </SwiperSlide>
         </Swiper>
       </ClientOnly>
@@ -120,6 +126,10 @@ const setSwiper = (swiper: SwiperClass) => {
         }
       }
     }
+  }
+
+  .ryb-swiper-slide {
+    height: 100%;
   }
 }
 

@@ -22,22 +22,63 @@
     "index": "About us",
     "block1": "“Rybnytsya” is an indicator of excellent quality, compliance to modern technologies of storage, processing and delivery of fish and seafood. The company was founded in November 2011. In the process of development, production volumes gradually increased. Currently, the company occupies a stable and significant position in the market of fish, marine and lean products.",
     "block2": "Dried fish, salted, smoked fish, elite seafood... “Rybnytsya” is a real paradise for lovers of the gifts of the sea and fresh water. The success of production largely depends on observing all the subtleties of production. Important part in our production takes the usage of modern equipment and expensive refrigerating chambers for storing fish products.",
-    "block3": "Each stage of production down to the smallest nuances takes place under the close attention of qualified specialists."
+    "block3": "Each stage of production, down to the smallest nuances, takes place under the close observation of qualified specialists."
   },
   "products": {
-    "goldSmokedSalmon": "Cold Smoked Salmon"
+    "beefJerky": "Beef jerky",
+    "curedBullCarcass": "Cured bull carcass",
+    "driedVobla": "Dried vobla",
+    "driedVomer": "Dried vomer",
+    "driedSmelt": "Dried smelt",
+    "driedBream": "Dried bream",
+    "driedBreamFillet": "Dried bream fillet",
+    "driedGossip": "Dried gossip",
+    "driedPlantain": "Dried plantain",
+    "driedSalaka": "Dried salaka",
+    "driedBruise": "Dried bruise",
+    "driedPikePerch": "Dried pike perch",
+    "driedCatfishFillet": "Dried catfish fillet",
+
+    "bullCarcass": "Bull carcass",
+    "coldSmokedSurmullet": "Cold smoked surmullet",
+    "coldSmokedVomer": "Cold smoked vomer",
+    "hotSmokedEel": "Hot smoked eel",
+    "coldSmokedPinkSalmon": "Cold smoked pink salmon",
+    "coldSmokedBreamFilletAtlantic": "Cold smoked atlantic bream fillet",
+    "coldSmokedSmelt": "Cold smoked smelt",
+    "coldSmokedBreamLayer": "Cold smoked bream layer",
+    "coldSmokedBream": "Cold smoked bream",
+    "coldSmokedSalaka": "Cold smoked salaka",
+    "coldSmokedBonito": "Cold smoked bonito",
+    "coldSmokedBreamFillet": "Cold smoked bream fillet",
+
+    "marinatedMussels": "Mussels marinated in oil",
+    "squidFilletFilling": "Squid fillet pieces in filling",
+    "koreanHerring": "Herring in Korean",
+    "koreanMarinatedSquid": "Korean marinated squid",
+
+    "salmonFillet": "Salmon fillet",
+    "slightlySaltSalaka": "Slightly salt salaka"
   },
   "categories": {
-    "salmon": "Salmon",
     "driedFish": "Dried fish",
+    "smokedFish": "Smoked fish",
     "cannedFish": "Canned Fish",
-    "saltedFish": "Salted Fish",
-    "hotSmokedFish": "Hot Smoked Fish",
-    "coldSmokedFish": "Cold Smoked Fish"
+    "saltedFish": "Salted Fish"
   },
   "partners": {
     "index": "Partners",
-    "text": "“Rybnytsya” offers excellent conditions on the market of fish and marine products. We invite trade networks, dealers, and distributors to cooperate. We guarantee products quality, compliance with storage, processing, production and delivery in time . Our products are presented in big retail chains such as:"
+    "text": "“Rybnytsya” offers excellent conditions on the market of fish and marine products. We invite trade networks, dealers, and distributors to cooperate. We guarantee products quality, compliance with storage, processing, production and delivery on time . Our products are presented in big retail chains such as:"
   },
-  "footer": "Footer"
+  "footer": {
+    "title": "Rybnytsya",
+    "text": {
+      "companyName": "TOV «RPK «ADMIRAL»",
+      "address": "St. Borisa Krotova, 35, Dnipro",
+      "telephone": "Phone: {tel}",
+      "email": "Email: {email}",
+      "emailCopied": "Email copied to clipboard",
+      "telCopied": "Phone number copied to clipboard"
+    }
+  }
 }

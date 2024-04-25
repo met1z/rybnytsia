@@ -6,6 +6,10 @@ import RybProductCard from './RybProductCard.vue'
 defineProps<{
   name: string
   image: string
+  items: {
+    i18nCode: string
+    image: string
+  }[]
 }>()
 
 const nuxtApp = useNuxtApp()
@@ -23,10 +27,10 @@ const windowSize = computed(() => nuxtApp.$windowSize.value.width)
     </VCard>
     <div class="ryb-products">
       <RybProductCard
-        v-for="item in 6"
-        :key="item"
-        :name="$t('products.goldSmokedSalmon')"
-        image="/products/gold-smoked-salmon.png"
+        v-for="item in items"
+        :key="item.i18nCode"
+        :name="$t(`products.${item.i18nCode}`)"
+        :image="item.image"
       />
     </div>
   </HomeDefaultContainer>

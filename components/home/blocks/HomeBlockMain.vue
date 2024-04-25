@@ -9,7 +9,7 @@ import HomeDefaultContainer from '../HomeDefaultContainer.vue'
   <HomeDefaultContainer id="main">
     <div class="home-main-block">
       <RybImage
-        image="/main-seo.jpeg"
+        image="/main-seo.webp"
         alt="Rybnytsia"
         :custom-aspect-ratio="(1700 / 3164) * 100 + '%'"
         class="home-main-block-image"

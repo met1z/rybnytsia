@@ -11,6 +11,7 @@ import RybProductBlock from '~/components/product/RybProductBlock.vue'
       :key="item.i18nCode"
       :name="$t(`categories.${item.i18nCode}`)"
       :image="`/categories/${item.image}`"
+      :items="item.items"
     />
   </RybContainer>
 </template>
