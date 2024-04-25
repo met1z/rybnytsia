@@ -71,7 +71,7 @@
     "text": "“Rybnytsya” offers excellent conditions on the market of fish and marine products. We invite trade networks, dealers, and distributors to cooperate. We guarantee products quality, compliance with storage, processing, production and delivery on time . Our products are presented in big retail chains such as:"
   },
   "footer": {
-    "title": "Rybnytsya",
+    "title": "Rybnytsia",
     "text": {
       "companyName": "TOV «RPK «ADMIRAL»",
       "address": "St. Borisa Krotova, 35, Dnipro",
@@ -80,5 +80,9 @@
       "emailCopied": "Email copied to clipboard",
       "telCopied": "Phone number copied to clipboard"
     }
+  },
+  "error": {
+    "button": "To main page",
+    "somethingWentWrong": "Something went wrong"
   }
 }

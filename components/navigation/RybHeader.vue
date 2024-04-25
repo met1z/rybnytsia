@@ -31,9 +31,9 @@ watch(router.currentRoute, close)
 <template>
   <header class="ryb-header-global">
     <div class="ryb-header-content ryb-default-container-width">
-      <div class="ryb-logo">
+      <NuxtLink :to="localeRoute({ path: '/' })" class="ryb-logo">
         <RybImage image="/logo.png" alt="Logo" :custom-aspect-ratio="(625 / 893) * 100 + '%'" />
-      </div>
+      </NuxtLink>
       <div class="header-actions">
         <RybLocaleSwitcher :locale="currentLocale" @on-change-locale="(c) => setLocale(c)" />
         <div class="header-actions-buttons">

@@ -1,8 +1,9 @@
 export const useDefaultHead = () => {
   const config = useRuntimeConfig()
+  const i18n = useI18n()
   const i18nHead = useLocaleHead({ addSeoAttributes: true })
 
-  const defaultTitle = 'Rybnytsia'
+  const defaultTitle = i18n.t('footer.title') ?? 'Рибниця'
   const titleConfig = config.public.title ? config.public.title : defaultTitle
   const head = computed(() => ({
     title: titleConfig,
@@ -27,7 +28,7 @@ export const useDefaultHead = () => {
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap',
       },
       ...(i18nHead.value.link ?? []),
     ],

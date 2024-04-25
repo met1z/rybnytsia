@@ -62,7 +62,7 @@ export const PRODUCTS_CATEGORIES = [
   },
   {
     i18nCode: CategoryRoute.saltedFish,
-    image: 'salted-fish.png',
+    image: 'salted-fish.jpg',
     route: CategoryRoute.saltedFish,
     items: [
       {
@@ -77,7 +77,7 @@ export const PRODUCTS_CATEGORIES = [
   },
   {
     i18nCode: CategoryRoute.smokedFish,
-    image: 'smoked-fish.png',
+    image: 'smoked-fish.jpg',
     route: CategoryRoute.smokedFish,
     items: [
       {
@@ -132,7 +132,7 @@ export const PRODUCTS_CATEGORIES = [
   },
   {
     i18nCode: CategoryRoute.cannedFish,
-    image: 'canned-fish.png',
+    image: 'canned-fish.jpg',
     route: CategoryRoute.cannedFish,
     items: [
       {

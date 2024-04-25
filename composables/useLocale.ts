@@ -4,7 +4,7 @@ export const useLocale = () => {
   const currentLocale = computed(() => i18n.locale.value as 'en' | 'ua')
 
   const setLocale = (value: 'en' | 'ua') => {
-    i18n.locale.value = value
+    i18n.setLocale(value)
   }
 
   return { currentLocale, setLocale }

@@ -42,7 +42,7 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
   },
   i18n: {
-    defaultLocale: 'en',
+    defaultLocale: 'ua',
     langDir: 'locales/',
     compilation: {
       strictMessage: false,

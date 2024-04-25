@@ -6,7 +6,7 @@ import RybSecondaryText from '../generic/typography/RybSecondaryText.vue'
 
 const MOBILE_WIDTH = 600
 const TELEPHONE_NUMBER = '+380 56 785 36 08'
-const EMAIL = 'amiralrpk@gmail.com'
+const EMAIL = 'admiralrpk@gmail.com'
 
 const nuxtApp = useNuxtApp()
 const i18n = useI18n()
@@ -45,7 +45,7 @@ const copyToClipboard = (val: string) => {
     <div class="footer-max ryb-default-container-width">
       <div class="footer-text">
         <div class="footer-text-sights">
-          <RybDefaultText :text="$t('footer.text.companyName')" />
+          <RybDefaultText :text="$t('footer.text.companyName')" class="footer-text-sights-company-name" />
           <RybDefaultText :text="$t('footer.text.address')" />
         </div>
 
@@ -175,6 +175,10 @@ footer {
 
         @media (max-width: 650px) {
           align-items: center;
+        }
+
+        .footer-text-sights-company-name {
+          font-weight: 700;
         }
 
         .footer-text-sights-item {

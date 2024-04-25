@@ -13,6 +13,7 @@ withDefaults(defineProps<{ text: string | number; tag?: 'h4' | 'div' | 'p' | 'la
 <style lang="scss" scoped>
 .ryb-text {
   font-size: 1.25rem;
+  font-weight: 300;
   line-height: 133%;
   color: var(--ryb-midnight-blue);
 

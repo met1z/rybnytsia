@@ -18,13 +18,17 @@ const windowSize = computed(() => nuxtApp.$windowSize.value.width)
 
 <template>
   <HomeDefaultContainer class="ryb-product-block">
-    <VCard position="relative" :image="image" max-width="1640" :height="windowSize > 1024 ? '15rem' : '10rem'">
-      <template #title>
-        <div class="ryb-category-title">
-          <RybDefaultTitle :text="name" />
-        </div>
-      </template>
-    </VCard>
+    <div class="ryb-category-block">
+      <VParallax
+        :src="image"
+        :scale="0.85"
+        :height="windowSize > 1024 ? '15rem' : '10rem'"
+        class="ryb-category-block-background"
+      />
+      <div class="ryb-category-title">
+        <RybDefaultTitle :text="name" />
+      </div>
+    </div>
     <div class="ryb-products">
       <RybProductCard
         v-for="item in items"
@@ -48,15 +52,23 @@ const windowSize = computed(() => nuxtApp.$windowSize.value.width)
     gap: 1rem;
   }
 
-  .ryb-category-title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .ryb-category-block {
+    position: relative;
+
+    .ryb-category-block-background {
+      opacity: 0.35;
+    }
+
+    .ryb-category-title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   .ryb-products {
@@ -74,5 +86,9 @@ const windowSize = computed(() => nuxtApp.$windowSize.value.width)
       gap: 1rem;
     }
   }
+}
+
+.v-img__img {
+  opacity: 0.3;
 }
 </style>

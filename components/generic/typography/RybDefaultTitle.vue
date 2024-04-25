@@ -14,6 +14,7 @@ withDefaults(defineProps<{ text: string | number; tag?: 'h4' | 'div' | 'p' | 'la
 .ryb-text {
   font-size: 3rem;
   line-height: 133%;
+  font-weight: 700;
   color: var(--ryb-midnight-blue);
 
   @media (max-width: 1250px) {

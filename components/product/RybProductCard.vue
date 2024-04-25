@@ -28,7 +28,7 @@ defineProps<{
   border: 1px solid var(--ryb-sky-blue);
   border-radius: 1.5rem;
 
-  @media (max-width: 450px) {
+  @media (max-width: 600px) {
     gap: 1rem;
     padding: 1rem;
   }
