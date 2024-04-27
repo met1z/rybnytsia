@@ -10,6 +10,7 @@ withDefaults(
     text: string
     disabled?: boolean
     loading?: boolean
+    withBorder?: boolean
     icon?: Component
     iconStyle?: StyleValue
     iconSide?: 'left' | 'right'
@@ -20,6 +21,7 @@ withDefaults(
     type: 'button',
     disabled: false,
     loading: false,
+    withBorder: false,
     icon: undefined,
     iconStyle: undefined,
     iconSide: 'left',
@@ -33,6 +35,7 @@ withDefaults(
     class="hc-button"
     :class="{
       'hc-button-right-mode': iconSide === 'right',
+      'hc-button-with-border': withBorder,
       'hc-button-stretch': stretch,
     }"
     :name="name"
@@ -118,5 +121,9 @@ withDefaults(
     margin-right: 0;
     margin-left: 0.5rem;
   }
+}
+
+.hc-button-with-border {
+  border: 1px solid var(--ryb-midnight-blue);
 }
 </style>

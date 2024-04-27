@@ -1,11 +1,12 @@
 import { createVuetify } from 'vuetify'
-import { VApp, VMenu, VParallax, VSnackbar } from 'vuetify/components'
+import { VApp, VDialog, VMenu, VParallax, VSnackbar } from 'vuetify/components'
 
 const VUETIFY_COMPONENTS = {
   [VApp.name!]: VApp,
   [VMenu.name!]: VMenu,
   [VSnackbar.name!]: VSnackbar,
   [VParallax.name!]: VParallax,
+  [VDialog.name!]: VDialog,
 }
 
 export default defineNuxtPlugin((nuxt) => {

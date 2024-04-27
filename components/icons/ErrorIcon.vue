@@ -125,7 +125,7 @@ body {
     fill: $firstColor;
   }
   @for $i from 1 through length($listColors) {
-    #{percentage($i / length($listColors))} {
+    #{percentage(calc($i / length($listColors)))} {
       fill: nth($listColors, $i);
     }
   }
@@ -136,7 +136,7 @@ body {
     fill: $firstColor;
   }
   @for $i from 1 through length($listColors) {
-    #{percentage($i / length($listColors))} {
+    #{percentage(calc($i / length($listColors)))} {
       fill: nth($listColors, $i);
     }
   }

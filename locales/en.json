@@ -60,6 +60,13 @@
     "salmonFillet": "Salmon fillet",
     "slightlySaltSalaka": "Slightly salt salaka"
   },
+  "generic": {
+    "name": "Name",
+    "categoryName": "Category name",
+    "price": "Price",
+    "pricePerKg": "{p} uah/kg",
+    "pricePerItem": "{p} uah/item"
+  },
   "categories": {
     "driedFish": "Dried fish",
     "smokedFish": "Smoked fish",

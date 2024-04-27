@@ -3,13 +3,26 @@ import type { Swiper as SwiperClass } from 'swiper/types'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 
 import { HOME_PRODUCTS } from '~/common/constants'
+import type { ProductInterface } from '~/common/types/product.interface'
 import SliderIcon from '~/components/icons/SliderIcon.vue'
 
 import RybSkeleton from '../../generic/RybSkeleton.vue'
 import RybProductCard from '../../product/RybProductCard.vue'
 import HomeDefaultContainer from '../HomeDefaultContainer.vue'
 
+const RybProductModal = defineAsyncComponent(() => import('../../product/modals/RybProductModal.vue'))
+
+const { formatPrice } = useUtils()
+
 const swiperInstance = ref<SwiperClass>()
+
+const dialogProduct = ref<ProductInterface>()
+const dialogProductModal = ref(false)
+
+const openModal = (product: ProductInterface) => {
+  dialogProduct.value = product
+  dialogProductModal.value = true
+}
 
 const setSwiper = (swiper: SwiperClass) => {
   swiperInstance.value = swiper
@@ -18,6 +31,12 @@ const setSwiper = (swiper: SwiperClass) => {
 
 <template>
   <HomeDefaultContainer>
+    <RybProductModal
+      v-if="dialogProduct"
+      :item="dialogProduct"
+      :dialog="dialogProductModal"
+      @on-close="dialogProductModal = false"
+    />
     <div class="home-products-block">
       <button type="button" class="ryb-swiper-paginator-button left desktop" @click="swiperInstance?.slidePrev()">
         <SliderIcon />
@@ -47,6 +66,14 @@ const setSwiper = (swiper: SwiperClass) => {
               :image="item.image"
               overflow
               class="ryb-swiper-slide"
+              @click="
+                openModal({
+                  name: $t(`products.${item.i18nCode}`),
+                  image: item.image,
+                  price: formatPrice(item.price, item.perKg),
+                  categoryName: $t(`categories.${item.categoryI18nCode}`),
+                })
+              "
             />
           </SwiperSlide>
         </Swiper>

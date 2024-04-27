@@ -27,10 +27,15 @@ defineProps<{
 
   border: 1px solid var(--ryb-sky-blue);
   border-radius: 1.5rem;
+  transition: all 0.3s ease;
 
   @media (max-width: 600px) {
     gap: 1rem;
     padding: 1rem;
+  }
+
+  &:hover {
+    border-color: var(--ryb-midnight-blue);
   }
 }
 

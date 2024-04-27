@@ -199,10 +199,11 @@ footer {
           }
 
           .footer-text-sights-item-button {
-            margin-left: 0.25rem;
+            margin-left: 0.5rem;
             padding: 0.25rem 0.75rem;
             transition: all 0.3s ease;
             border-radius: 2rem;
+            border: 1px solid var(--ryb-midnight-blue);
 
             &:hover {
               background-color: var(--ryb-midnight-blue);

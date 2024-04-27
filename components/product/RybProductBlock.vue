@@ -1,7 +1,11 @@
 <script lang="ts" setup>
+import type { ProductInterface } from '~/common/types/product.interface'
+
 import RybDefaultTitle from '../generic/typography/RybDefaultTitle.vue'
 import HomeDefaultContainer from '../home/HomeDefaultContainer.vue'
 import RybProductCard from './RybProductCard.vue'
+
+const RybProductModal = defineAsyncComponent(() => import('./modals/RybProductModal.vue'))
 
 defineProps<{
   name: string
@@ -9,15 +13,32 @@ defineProps<{
   items: {
     i18nCode: string
     image: string
+    price: number
+    perKg: boolean
   }[]
 }>()
 
+const { formatPrice } = useUtils()
 const nuxtApp = useNuxtApp()
 const windowSize = computed(() => nuxtApp.$windowSize.value.width)
+
+const dialogProduct = ref<ProductInterface>()
+const dialogProductModal = ref(false)
+
+const openModal = (product: ProductInterface) => {
+  dialogProduct.value = product
+  dialogProductModal.value = true
+}
 </script>
 
 <template>
   <HomeDefaultContainer class="ryb-product-block">
+    <RybProductModal
+      v-if="dialogProduct"
+      :item="dialogProduct"
+      :dialog="dialogProductModal"
+      @on-close="dialogProductModal = false"
+    />
     <div class="ryb-category-block">
       <VParallax
         :src="image"
@@ -35,6 +56,14 @@ const windowSize = computed(() => nuxtApp.$windowSize.value.width)
         :key="item.i18nCode"
         :name="$t(`products.${item.i18nCode}`)"
         :image="item.image"
+        @click="
+          openModal({
+            name: $t(`products.${item.i18nCode}`),
+            image: item.image,
+            price: formatPrice(item.price, item.perKg),
+            categoryName: name,
+          })
+        "
       />
     </div>
   </HomeDefaultContainer>

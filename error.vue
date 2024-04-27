@@ -21,7 +21,7 @@ const handleError = () => clearError({ redirect: localePath({ path: '/' }) })
         <div class="generic-error">
           <ErrorIcon />
           <RybDefaultTitle class="hey-clay-big-title" :text="$t('error.somethingWentWrong')" />
-          <RybButton name="Go home" :text="$t('error.button')" type="button" @click="handleError" />
+          <RybButton name="Go home" :text="$t('error.button')" type="button" with-border @click="handleError" />
         </div>
       </RybContainer>
     </main>
