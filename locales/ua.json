@@ -4,8 +4,10 @@
     "ukraine": "Український",
     "routes": {
       "main": "Головна",
-      "products": "Товари",
-      "aboutUs": "Про нас"
+      "products": "Виробництво",
+      "aboutUs": "Про нас",
+      "contact": "Контакти",
+      "work": "Працювати з нами"
     },
     "locale": {
       "en": "EN",

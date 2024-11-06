@@ -43,8 +43,14 @@ watch(router.currentRoute, close)
           <NuxtLink :to="localeRoute({ path: '/products' })" :aria-label="$t('header.routes.products')">
             <RybButton name="Products" type="button" :text="$t('header.routes.products')" />
           </NuxtLink>
-          <NuxtLink :to="localeRoute({ path: '/', hash: `#about` })" :aria-label="$t('header.routes.aboutUs')">
+          <NuxtLink :to="localeRoute({ path: '/about' })" :aria-label="$t('header.routes.aboutUs')">
             <RybButton name="About us" type="button" :text="$t('header.routes.aboutUs')" />
+          </NuxtLink>
+          <NuxtLink :to="localeRoute({ path: '/work' })" :aria-label="$t('header.routes.work')">
+            <RybButton name="Work with us" type="button" :text="$t('header.routes.work')" />
+          </NuxtLink>
+          <NuxtLink :to="localeRoute({ path: '/contact' })" :aria-label="$t('header.routes.contact')">
+            <RybButton name="Contact" type="button" :text="$t('header.routes.contact')" />
           </NuxtLink>
         </div>
         <button name="Menu" type="button" class="header-actions-menu" @click="toggleMenu">
@@ -65,8 +71,14 @@ watch(router.currentRoute, close)
             <NuxtLink class="ryb-route" :to="localeRoute({ path: '/products' })">
               <RybButton name="Products" type="button" :text="$t('header.routes.products')" stretch />
             </NuxtLink>
-            <NuxtLink class="ryb-route" :to="localeRoute({ path: '/', hash: `#about` })">
+            <NuxtLink class="ryb-route" :to="localeRoute({ path: '/about' })">
               <RybButton name="About us" type="button" :text="$t('header.routes.aboutUs')" stretch />
+            </NuxtLink>
+            <NuxtLink :to="localeRoute({ path: '/work' })" :aria-label="$t('header.routes.work')">
+              <RybButton name="Work with us" type="button" :text="$t('header.routes.work')" />
+            </NuxtLink>
+            <NuxtLink :to="localeRoute({ path: '/contact' })" :aria-label="$t('header.routes.contact')">
+              <RybButton name="Contact" type="button" :text="$t('header.routes.contact')" />
             </NuxtLink>
           </div>
         </VMenu>

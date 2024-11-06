@@ -4,8 +4,10 @@
     "ukraine": "Ukraine",
     "routes": {
       "main": "Main page",
-      "products": "Products",
-      "aboutUs": "About us"
+      "products": "Production",
+      "aboutUs": "About us",
+      "contact": "Contact",
+      "work": "Work with us"
     },
     "locale": {
       "en": "EN",
