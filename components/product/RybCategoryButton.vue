@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { StyleValue } from 'vue'
 
-import RybDotsSpinner from './RybDotsSpinner.vue'
+import RybDotsSpinner from '../generic/RybDotsSpinner.vue'
 
 withDefaults(
   defineProps<{
@@ -11,6 +11,7 @@ withDefaults(
     disabled?: boolean
     loading?: boolean
     withBorder?: boolean
+    selected?: boolean
     icon?: Component
     iconStyle?: StyleValue
     iconSide?: 'left' | 'right'
@@ -22,6 +23,7 @@ withDefaults(
     disabled: false,
     loading: false,
     withBorder: false,
+    selected: false,
     icon: undefined,
     iconStyle: undefined,
     iconSide: 'left',
@@ -37,6 +39,7 @@ withDefaults(
       'hc-button-right-mode': iconSide === 'right',
       'hc-button-with-border': withBorder,
       'hc-button-stretch': stretch,
+      'hc-button-selected': selected,
     }"
     :name="name"
     :type="type"
@@ -68,6 +71,9 @@ withDefaults(
 
   transition: all 0.3s ease;
   border-radius: 2rem;
+  border: none;
+  background-color: var(--ryb-white);
+  cursor: pointer;
 
   &:hover {
     background-color: var(--ryb-sky-blue);
@@ -78,10 +84,19 @@ withDefaults(
   }
 
   &:enabled:active {
-    background-color: var(--ryb-sky-blue);
+    background-color: var(--ryb-midnight-blue);
 
     .hc-button-text {
       color: var(--ryb-white);
+    }
+  }
+
+  &:disabled {
+    background-color: var(--ryb-light-grey);
+    cursor: not-allowed;
+
+    .hc-button-text {
+      color: var(--ryb-grey);
     }
   }
 
@@ -104,10 +119,6 @@ withDefaults(
     display: flex;
     font-size: 0.1875rem;
   }
-
-  &:disabled {
-    cursor: auto;
-  }
 }
 
 .hc-button-stretch {
@@ -125,5 +136,14 @@ withDefaults(
 
 .hc-button-with-border {
   border: 1px solid var(--ryb-midnight-blue);
+}
+
+.hc-button-selected {
+  background-color: var(--ryb-sky-blue);
+  box-shadow: 0 0 10px var(--ryb-sky-blue);
+
+  .hc-button-text {
+    color: var(--ryb-white);
+  }
 }
 </style>

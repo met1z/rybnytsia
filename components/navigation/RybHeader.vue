@@ -1,14 +1,12 @@
 <script lang="ts" setup>
 import RybButton from '../generic/RybButton.vue'
 import RybImage from '../generic/RybImage.vue'
-import RybLocaleSwitcher from '../generic/RybLocaleSwitcher.vue'
 import CloseIcon from '../icons/CloseIcon.vue'
 import MenuIcon from '../icons/MenuIcon.vue'
 
 const nuxtApp = useNuxtApp()
 const router = useRouter()
 const localeRoute = useLocaleRoute()
-const { currentLocale, setLocale } = useLocale()
 
 const menu = ref(false)
 const windowSize = computed(() => nuxtApp.$windowSize.value.width)
@@ -35,7 +33,6 @@ watch(router.currentRoute, close)
         <RybImage image="/logo.png" alt="Logo" :custom-aspect-ratio="(625 / 893) * 100 + '%'" />
       </NuxtLink>
       <div class="header-actions">
-        <RybLocaleSwitcher :locale="currentLocale" @on-change-locale="(c) => setLocale(c)" />
         <div class="header-actions-buttons">
           <NuxtLink :to="localeRoute({ path: '/' })" :aria-label="$t('header.routes.main')">
             <RybButton name="Main" type="button" :text="$t('header.routes.main')" />
@@ -45,12 +42,6 @@ watch(router.currentRoute, close)
           </NuxtLink>
           <NuxtLink :to="localeRoute({ path: '/about' })" :aria-label="$t('header.routes.aboutUs')">
             <RybButton name="About us" type="button" :text="$t('header.routes.aboutUs')" />
-          </NuxtLink>
-          <NuxtLink :to="localeRoute({ path: '/work' })" :aria-label="$t('header.routes.work')">
-            <RybButton name="Work with us" type="button" :text="$t('header.routes.work')" />
-          </NuxtLink>
-          <NuxtLink :to="localeRoute({ path: '/contact' })" :aria-label="$t('header.routes.contact')">
-            <RybButton name="Contact" type="button" :text="$t('header.routes.contact')" />
           </NuxtLink>
         </div>
         <button name="Menu" type="button" class="header-actions-menu" @click="toggleMenu">
@@ -73,12 +64,6 @@ watch(router.currentRoute, close)
             </NuxtLink>
             <NuxtLink class="ryb-route" :to="localeRoute({ path: '/about' })">
               <RybButton name="About us" type="button" :text="$t('header.routes.aboutUs')" stretch />
-            </NuxtLink>
-            <NuxtLink :to="localeRoute({ path: '/work' })" :aria-label="$t('header.routes.work')">
-              <RybButton name="Work with us" type="button" :text="$t('header.routes.work')" />
-            </NuxtLink>
-            <NuxtLink :to="localeRoute({ path: '/contact' })" :aria-label="$t('header.routes.contact')">
-              <RybButton name="Contact" type="button" :text="$t('header.routes.contact')" />
             </NuxtLink>
           </div>
         </VMenu>

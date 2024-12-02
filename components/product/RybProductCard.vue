@@ -1,10 +1,12 @@
 <script lang="ts" setup>
 import RybImage from '../generic/RybImage.vue'
 import RybDefaultText from '../generic/typography/RybDefaultText.vue'
+import RybSecondaryText from '../generic/typography/RybSecondaryText.vue'
 
 defineProps<{
   name: string
   image: string
+  price?: string
   overflow?: boolean
 }>()
 </script>
@@ -13,6 +15,7 @@ defineProps<{
   <div class="ryb-product-card" :class="{ 'overflow-text': overflow }">
     <RybImage :alt="name" :image="image" custom-aspect-ratio="100%" />
     <RybDefaultText :text="name" />
+    <RybSecondaryText v-if="price" :text="price" />
   </div>
 </template>
 

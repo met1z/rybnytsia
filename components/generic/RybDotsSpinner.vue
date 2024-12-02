@@ -6,7 +6,7 @@
 
 <style>
 .ryb-loader {
-  color: var(--loader-color, var(--ryb-blue));
+  color: var(--loader-color, var(--ryb-sky-blue));
   font-size: inherit;
   width: 1em;
   height: 1em;
